@@ -10,6 +10,9 @@ module.exports = (env, argv) => {
     mode: prod ? "production" : "development",
     devtool: prod ? "hidden-source-map" : "eval",
     entry: "./src/index.tsx",
+    cache: {
+      type: "filesystem",
+    },
     output: {
       path: path.join(__dirname, "/dist"),
       filename: "[name].js",
